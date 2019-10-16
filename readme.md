@@ -1,4 +1,9 @@
-##Adds Decorator Based TS-Mockito Support to Alsatian + decorator based mock injection
+# Adds Decorator Based TS-Mockito Support to Alsatian + decorator based mock injection
+
+## Install
+npm install alsatian-tsmockito
+
+## Example
 See Demo.spec.ts in test folder:
 
 ```typescript
