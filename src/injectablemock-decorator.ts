@@ -2,7 +2,7 @@ import {InjectionMethod} from "./InjectionMethod";
 import {PropertyAccessInjection} from "./PropertyAccessInjection";
 import {InjectMockInfo} from "./internal/InjectMockInfo";
 import {mock} from "ts-mockito";
-import {ReflectUtils} from "./Utils";
+import {ReflectUtils} from "./internal/ReflectUtils";
 
 export function InjectableMock<T>(injectionMethod?: InjectionMethod) {
     return (

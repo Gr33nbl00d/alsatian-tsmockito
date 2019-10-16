@@ -10,7 +10,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'themis-validation-core-umd.js',
+        filename: 'alsatian-tsmockito-umd.js',
         libraryTarget: "umd",
     },
     module: {

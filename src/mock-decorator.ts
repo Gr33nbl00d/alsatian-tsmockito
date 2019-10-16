@@ -1,5 +1,5 @@
 import {mock} from "ts-mockito";
-import {ReflectUtils} from "./Utils";
+import {ReflectUtils} from "./internal/ReflectUtils";
 
 export function Mock<T>() {
     return (
