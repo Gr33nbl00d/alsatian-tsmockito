@@ -1,0 +1,49 @@
+{
+  "name": "alsatian-tsmockito",
+  "license": "MIT",
+  "keywords": [
+    "mocking"
+  ],
+  "version": "0.9.1",
+  "description": "Alsatian ts-mockito support",
+  "author": "Gr33nbl00d",
+  "main": "dist/lib/src/index.js",
+  "module": "dist/lib/src/index.js",
+  "typings": "dist/types/src/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/Gr33nbl00d/alsatian-tsmockito/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gr33nbl00d/alsatian-tsmockito.git"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc --module commonjs && cross-env NODE_ENV=production webpack --progress --hide-modules --mode production --config webpack-production.config.js",
+    "test": "ts-node ./test/runner.ts",
+    "generate-barrels": "barrelsby --delete -e ./internal.* -d ./src"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "alsatian": "^3.0.1",
+    "babel-loader": "^8.0.6",
+    "barrelsby": "^2.1.1",
+    "rimraf": "^3.0.0",
+    "tap-bark": "^2.1.0",
+    "ts-loader": "^6.2.0",
+    "ts-mockito": "^2.5.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  }
+}
