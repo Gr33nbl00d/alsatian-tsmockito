@@ -1,8 +1,8 @@
-import {InjectionMethod} from "./InjectionMethod";
-import {PropertyAccessInjection} from "./PropertyAccessInjection";
-import {InjectMockInfo} from "./internal/InjectMockInfo";
+import {InjectionMethod} from "../InjectionMethod";
+import {PropertyAccessInjection} from "../PropertyAccessInjection";
+import {InjectMockInfo} from "../internal/InjectMockInfo";
 import {mock} from "ts-mockito";
-import {ReflectUtils} from "./internal/ReflectUtils";
+import {ReflectUtils} from "../internal/ReflectUtils";
 
 export function InjectableMock<T>(injectionMethod?: InjectionMethod) {
     return (
@@ -13,11 +13,7 @@ export function InjectableMock<T>(injectionMethod?: InjectionMethod) {
         if (!injectionMethod) {
             injectionMethod = new PropertyAccessInjection();
         }
-        let list: Array<InjectMockInfo> = Reflect.getMetadata("INJECTABLE_MOCKS", target);
-        if (!list) {
-            list = [];
-            Reflect.defineMetadata("INJECTABLE_MOCKS", list, target);
-        }
+        var list = ReflectUtils.getInjectableMockListOfObject(target);
         let clazzToMock = ReflectUtils.getClassByReflection(target, propertyKey);
         list.push(new InjectMockInfo(propertyKey, injectionMethod));
         if (clazzToMock)

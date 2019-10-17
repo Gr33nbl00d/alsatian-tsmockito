@@ -21,6 +21,9 @@
     "clean": "rimraf dist",
     "build": "tsc --module commonjs && cross-env NODE_ENV=production webpack --progress --hide-modules --mode production --config webpack-production.config.js",
     "test": "ts-node ./test/runner.ts",
+    "preversion": "npm test",
+    "version": "npm run clean && npm run build",
+    "postversion": "git push && git push --tags && rimraf  build/temp",
     "generate-barrels": "barrelsby --delete -e ./internal.* -d ./src"
   },
   "babel": {
