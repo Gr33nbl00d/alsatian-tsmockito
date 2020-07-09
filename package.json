@@ -4,7 +4,7 @@
   "keywords": [
     "mocking"
   ],
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "Alsatian ts-mockito support",
   "author": "Gr33nbl00d",
   "main": "dist/lib/src/index.js",
@@ -42,6 +42,7 @@
     "babel-loader": "^8.1.0",
     "barrelsby": "^2.2.0",
     "rimraf": "^3.0.2",
+    "standard-version": "^8.0.0",
     "tap-bark": "^2.3.1",
     "ts-loader": "^8.0.0",
     "ts-mockito": "^2.6.1",
