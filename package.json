@@ -25,7 +25,8 @@
     "version": "npm run clean && npm run build",
     "postversion": "git push && git push --tags && rimraf  build/temp",
     "generate-barrels": "barrelsby --delete -e ./internal.* -d ./src",
-    "release": "npm run clean && npm run build && npm run test && standard-version"
+    "release": "npm run clean && npm run build && npm run test && standard-version",
+    "publish" : "git push --follow-tags origin master && npm publish"
   },
   "babel": {
     "presets": [
