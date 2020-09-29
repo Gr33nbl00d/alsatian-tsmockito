@@ -4,7 +4,7 @@
   "keywords": [
     "mocking"
   ],
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "Alsatian ts-mockito support",
   "author": "Gr33nbl00d",
   "main": "dist/lib/src/index.js",
@@ -26,7 +26,7 @@
     "postversion": "git push && git push --tags && rimraf  build/temp",
     "generate-barrels": "barrelsby --delete -e ./internal.* -d ./src",
     "release": "npm run clean && npm run build && npm run test && standard-version",
-    "publish" : "git push --follow-tags origin master && npm publish"
+    "publish": "git push --follow-tags origin master && npm publish"
   },
   "babel": {
     "presets": [
