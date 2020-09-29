@@ -4,7 +4,7 @@
   "keywords": [
     "mocking"
   ],
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Alsatian ts-mockito support",
   "author": "Gr33nbl00d",
   "main": "dist/lib/src/index.js",
